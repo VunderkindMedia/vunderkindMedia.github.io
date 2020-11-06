@@ -10,6 +10,21 @@ body {
   font-family: Lato, sans-serif;
 }
 
+a:hover {
+  text-decoration: none;
+  color: unset;
+}
+
+select {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .red-charachters {
   color: $mainColor !important;
 }
@@ -683,6 +698,22 @@ nav {
     font-weight: 300;
     line-height: 1.43;
     color: #636363;
+    & > ul {
+      display: flex;
+      & > li {
+        display: flex;
+        & > a {
+          text-decoration: none;
+          color: unset;
+          &:visited {
+            color: unset;
+          }
+        }
+        & > span {
+          margin: 0 3px;
+        }
+      }
+    }
   }
 }
 
@@ -910,5 +941,180 @@ nav {
     }
   }
 
+}
+.carousel-control-prev {
+  justify-content: flex-start;
+}
+.carousel-control-next {
+  justify-content: flex-end;
+}
+.slider {
+
+  & &__buttons {
+    padding: 11.5px 16.5px;
+    background-color: #d8d8d8;
+    span {
+      height: 14px !important;
+      width: 14px !important;
+      line-height: .5 !important;
+    }
+  }
+}
+.purchase_form, .slider {
+  position: relative;
+}
+.purchase_form {
+  height: 730px;
+  margin-bottom: 105px;
+  .container {
+    border: solid 1px #eaeaea;
+    margin-top: -68px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 70px 260px;
+  }
+  & &__title {
+    padding: 15px;
+    border-bottom: solid 1px #eaeaea;
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 63px;
+      height: 100% + 3;
+      border-bottom: solid 2px $mainColor;
+      top: 0;
+      left: 33%;
+    }
+  }
+  & &__subtitle {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.33;
+    color: #4d4d4d;
+    margin-bottom: 63px;
+  }
+
+  & &__content {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    text-align: center;
+    color: #5e5e5e;
+    margin-bottom: 28px;
+  }
+
+  & &__properties {
+    width: 330px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 37px;
+  }
+
+  & &__material, & &__designer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    line-height: 1.71;
+    color: #b9b9b9;
+
+    & > span {
+      color: #666666;
+      margin-left: 5px;
+    }
+  }
+
+  & &__price {
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1;
+    padding-bottom: 43px;
+    border-bottom: solid 1px #eaeaea;
+  }
+  & &__form {
+    padding: 60px 40px;
+    box-sizing: border-box;
+    width: 100%;
+    & > fieldset {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  & &__field {
+
+    & > span {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1.71;
+      color: #666666;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+  }
+  &__submit {
+    color: #ef5b70;
+    border-color: #ef5b70;
+    width: inherit;
+    margin-top: 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0;
+
+    & > i {
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: #ef5b70;
+      border-color: #ef5b70;
+    }
+  }
+}
+
+.dropdown-toggle {
+  width: 144px;
+  background: none;
+  border-radius: 0;
+  border-color: #eaeaea;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.85;
+  letter-spacing: normal;
+  text-align: left;
+  color: #bcbcbc;
+  &:hover,
+  &:focus,
+  &:active,
+  .btn-secondary:not(:disabled):not(.disabled).active,
+  .btn-secondary:not(:disabled):not(.disabled):active,
+  .show>.dropdown-toggle
+  {
+    background-color: #eaeaea !important;
+    border-color: #eaeaea !important;
+    color: unset !important;
+    box-shadow: unset !important;
+  }
+  &:after {
+    right: 10px;
+    position: absolute;
+    top: 45.3%;
+  }
 }
 
